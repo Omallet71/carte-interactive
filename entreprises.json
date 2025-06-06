@@ -1,0 +1,29 @@
+[
+  {
+    "Nom": "Entreprise A",
+    "Adresse": "12 rue du Bourg, 71000 Mâcon",
+    "Métier": "Plomberie",
+    "Contact": "03 85 00 00 00",
+    "Label": "RGE",
+    "lat": 46.3063,
+    "lon": 4.8285
+  },
+  {
+    "Nom": "Entreprise B",
+    "Adresse": "Place de la Mairie, 71600 Paray-le-Monial",
+    "Métier": "Électricien",
+    "Contact": "03 85 11 22 33",
+    "Label": "",
+    "lat": 46.4512,
+    "lon": 4.1208
+  },
+  {
+    "Nom": "Entreprise C",
+    "Adresse": "5 rue des Lilas, 71100 Chalon-sur-Saône",
+    "Métier": "Menuisier",
+    "Contact": "03 85 44 55 66",
+    "Label": "Qualibat",
+    "lat": 46.7834,
+    "lon": 4.8561
+  }
+]
