@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Carte interactive - Recherche par adresse</title>
+  <title>Carte interactive - Adresse de référence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
@@ -17,9 +17,13 @@
       z-index: 1000;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      max-width: 300px;
+      max-width: 320px;
     }
-    .filter-panel label { display: block; margin-top: 8px; }
+    .filter-panel label, .filter-panel input, .filter-panel button {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+    }
   </style>
 </head>
 <body>
@@ -104,6 +108,7 @@ function updateDistanceFilter(km) {
 
 function geocodeAddress() {
   const address = document.getElementById('addressInput').value;
+  if (!address) return alert("Merci de saisir une adresse.");
   fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
     .then(res => res.json())
     .then(data => {
